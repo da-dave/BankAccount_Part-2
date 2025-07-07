@@ -18,12 +18,12 @@ class CrazyAccount:
     def deposit(self, amount):
         self.current_balance += amount
         print("\nDeposit Successful.")
-        print("Current Balance: \t{}".format(self.current_balance))
+        print("Current Balance: \t{}\n".format(self.current_balance))
 
     def withdraw(self, amount):
         print("\nWithdrawal Requested.")
         if amount > self.current_balance:
-            print("\nWithdrawal of {} failed. Current balance is below the minimum balance Requirement.".format(amount))
+            print("\nWithdrawal of {} failed. Current balance is below the minimum balance requirement.".format(amount))
             print("Current Balance: {}".format(self.current_balance))
             print("Minimum Balance: {}\n".format(self.minimum_balance))
 
@@ -35,7 +35,7 @@ class CrazyAccount:
         else:
             self.current_balance -= amount
             print("\nWithdrawal of {} Successful.".format(amount))
-            print("Current Balance: \t{}".format(self.current_balance))
+            print("Current Balance: \t{}\n".format(self.current_balance))
 
     def print_customer_information(self):
         print("\n",CrazyAccount.bank_title)

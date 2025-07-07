@@ -1,10 +1,10 @@
 from CrazyBank import CrazyAccount
 
 
-class BankAccount(CrazyAccount):
+class CheckingAccount(CrazyAccount):
 
-    def __init__(self, customer_name, current_balance, minimum_balance):
-        super(BankAccount, self).__init__(customer_name, current_balance, minimum_balance)
+    def __init__(self, customer_name, current_balance, minimum_balance, routing_number, account_number):
+        super(CheckingAccount, self).__init__(customer_name, current_balance, minimum_balance, routing_number, account_number)
         self.withdrawal_limit = 500
 
 
@@ -17,4 +17,5 @@ class BankAccount(CrazyAccount):
             print("Current Balance: {}".format(self.current_balance))
             print("Minimum Balance: {}\n".format(self.minimum_balance))
 
-            super(BankAccount, self).withdraw(amount)
+        else:
+            super().withdraw(amount)
